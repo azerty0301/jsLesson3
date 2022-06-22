@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="msg"></h1>
+    <script>
+        const msg=document.getElementById("msg");
+    window.onload=()=>{
+        console.log("onload");
+        //window.alert("こんにちは!");
+        if(window.confirm("今日はいい天気ですか?")){
+            msg.textContent="よかったですね"
+        }else{
+            msg.textContent="残念です"
+        }
+        let ans=window.prompt("何歳ですか?");
+        if(ans >= 20){
+            msg.textContent="大人ですね";
+        }else{
+            msg.textContent="子供ですね";
+        }
+
+    };
+    document.addEventListener("DOMContentLoaded");
+    console.log("DOMContentLoaded");
+    msg.textContent="Hello";
+
+    </script>
+    
+</body>
+</html>
